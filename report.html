@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Incident Report | NETSHELT</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/stats.js"></script>
+  <script defer src="js/report.js"></script>
+</head>
+<body>
+
+<header>
+  <h2>NETSHELT</h2>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Incident Report Generator</h3>
+
+    <div class="form-group">
+      <label>Incident Type</label>
+      <select id="type">
+        <option>Phishing</option>
+        <option>Fake Website</option>
+        <option>OTP Scam</option>
+        <option>Job Scam</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Platform</label>
+      <select id="platform">
+        <option>Email</option>
+        <option>SMS</option>
+        <option>WhatsApp</option>
+        <option>Website</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea id="desc" placeholder="Describe what happened in detail..."></textarea>
+    </div>
+
+    <button onclick="generateReport()">Generate Report</button>
+  </div>
+
+  <div class="card" id="outputCard" style="display:none;">
+    <h4>Generated Report</h4>
+    <pre id="reportText"></pre>
+    <button onclick="copyReport()">Copy Report</button>
+  </div>
+
+</div>
+
+</body>
+</html>

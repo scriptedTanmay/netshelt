@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security Stats</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/stats.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h3>Your NETSHELT Activity</h3>
+    <p id="statsOutput"></p>
+  </div>
+</div>
+
+<script>
+  const s = JSON.parse(localStorage.getItem("netsheltStats"));
+  document.getElementById("statsOutput").innerHTML = `
+    🔗 Link Checks: ${s.linkChecks}<br><br>
+    📧 Message Checks: ${s.messageChecks}<br><br>
+    🌐 Website Checks: ${s.websiteChecks}<br><br>
+    🔐 Password Checks: ${s.passwordChecks}
+  `;
+</script>
+
+</body>
+</html>
